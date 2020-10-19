@@ -6,7 +6,7 @@ Grzegorz Kurzejamski and Grzegorz Sarwas
 at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics and Gaming</a>
 
 **System overview:**
-<p align="center"> <img src=".github/overview.png" width="100%"> </p>
+<p align="center"> <img src="visualization/demo.gif" width="100%"> </p>
 
 ### Abstract
 The paper describes a deep neural network-based detector dedicated for ball and players detection in high resolution, long shot, video recordings of soccer matches. The detector, dubbed FootAndBall, has an efficient fully
