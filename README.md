@@ -21,6 +21,7 @@ two orders of magnitude less parameters than a generic deep neural network-based
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
 **System overview:**
+<p align="center"> <img src="visualization/overview.png" width="100%"> </p>
 
 ### Citation
 If you find our work useful in your research, please consider citing:
