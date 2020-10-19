@@ -7,7 +7,6 @@ Created by [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl),
 Grzegorz Kurzejamski and Grzegorz Sarwas
 at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics and Gaming</a>
 
-**System overview:**
 <p align="center"> <img src="visualization/demo.gif" width="100%"> </p>
 
 ### Abstract
@@ -21,6 +20,7 @@ the object of interest is taken into account for the classification. Due to its 
 two orders of magnitude less parameters than a generic deep neural network-based object detector, such as
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
+**System overview:**
 
 ### Citation
 If you find our work useful in your research, please consider citing:
@@ -38,12 +38,12 @@ If you find our work useful in your research, please consider citing:
     }
     
 ### Environment and Dependencies
-* Code was tested using Python 3.6 on PyTorch 1.6 with CUDA 10.2 on Ubuntu 18.04
+* Code was tested using Python 3.6 with PyTorch 1.6 on Ubuntu 18.04 with CUDA 10.2
 
 Other dependencies include:
 * Python (1.6 or above)
 * scipy
-* opencv
+* opencv-python
 * kornia
 * PIL
 
@@ -57,21 +57,22 @@ and
 . 
 
 ### Training
-To train our network, edit config.txt and set paths to training datasets.
+To train our network, edit `config.txt` and set paths to ISSIA-CNR Soccer and SoccerPlayerDetection (optionally) training datasets.
 Then, run:
+    
     python train_detector.py --config config.txt
 
 
 ### Testing
-The pre-trained model *model_20201019_1416_final.pth* is saved in `models/` folder.
-The model was trained with ISSIA-CNR dataset (cameras 1,2,3 and 4) and SoccerPlayerDetection dataset (DataSet_001).
+The pre-trained model `model_20201019_1416_final.pth` is saved in `models/` folder.
+The model was trained with ISSIA-CNR dataset (cameras 1,2,3 and 4) and SoccerPlayerDetection dataset (set DataSet_001).
 To run the trained model use the following command:
 
-    python run_detector --path datasets/issia/filmrole5.avi --weights models/model_20201019_1416_final.pth --out_video out_video.avi --device <cpu or cuda>
+    python run_detector --path datasets/issia/filmrole5.avi --weights models/model_20201019_1416_final.pth --out_video out_video.avi --device <cpu|cuda>
 
 This will create a video with name given by *out_video* parameter with bounding boxes around the ball and 
 players position. Detection confidence level (in 0..1 range) will be displayed above each bounding box. 
-Videos with detection results on ISSIA-CNR dataset can ve downloaded here:
+Examplary videos with detection results on ISSIA-CNR Soccer dataset can ve downloaded here:
 <a href="visualization/results5.mp4>camera 5</a>,  
 <a href="visualization/results6.mp4>camera 6</a>
 . 
