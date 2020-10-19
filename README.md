@@ -51,7 +51,10 @@ To run the trained model use the following command:
 
 This will create a video with name given by *out_video* parameter with bounding boxes around the ball and 
 players position. Detection confidence level (in 0..1 range) will be displayed above each bounding box. 
-
+Videos with detection results on ISSIA-CNR dataset can ve downloaded here:
+<a href="visualization/results5.mp4>camera 5</a>,  
+<a href="visualization/results6.mp4>camera 6</a>
+. 
 
 ### Citation
 If you find our work useful in your research, please consider citing:
