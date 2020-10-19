@@ -40,7 +40,7 @@ If you find our work useful, please consider citing:
     }
     
 ### Environment and Dependencies
-Code was tested using Python 3.6 with PyTorch 1.6 on Ubuntu 18.04 with CUDA 10.2
+Code was tested using Python 3.6 with PyTorch 1.6 on Ubuntu 18.04 with CUDA 10.2.
 Other dependencies include:
 * Python (1.6 or above)
 * scipy
@@ -50,7 +50,7 @@ Other dependencies include:
 
 
 ### Datasets
-Our model is mainly trained using
+Our model is trained using
 <a href="https://drive.google.com/file/d/1Pj6syLRShNQWQaunJmAZttUw2jDh8L_f/view?usp=sharing" target="_blank">ISSIA-CNR Soccer dataset</a> 
 and
 <a href="http://www.cs.ubc.ca/labs/lci/datasets/SoccerPlayerDetection_bmvc17_v1.zip" target="_blank">SoccerPlayerDetection_bmvc17_v1 dataset</a>
