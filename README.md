@@ -2,8 +2,8 @@
 
 ## FootAndBall: *Integrated player and ball detector*
 Created by [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl),
-<a href="https://sagsport.com/?lang=en" target="_blank">Grzegorz Kurzejamski/a>,
-<a href="https://sagsport.com/?lang=en" target="_blank">Grzegorz Sarwas/a>
+<a href="https://sagsport.com/?lang=en" target="_blank">Grzegorz Kurzejamski>,
+<a href="https://sagsport.com/?lang=en" target="_blank">Grzegorz Sarwas>
 at Sport Algorithmics and Gaming
 
 **System overview:**
@@ -19,28 +19,6 @@ bigger receptive field. This improves discriminability of small objects (the bal
 the object of interest is taken into account for the classification. Due to its specialized design, the network has
 two orders of magnitude less parameters than a generic deep neural network-based object detector, such as
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
-
-
-### Citation
-If you find our work useful in your research, please consider citing:
-
-    @inproceedings{DBLP:conf/visapp/KomorowskiKS20,
-      author    = {Jacek Komorowski and
-                   Grzegorz Kurzejamski and
-                   Grzegorz Sarwas},
-      editor    = {Giovanni Maria Farinella and
-                   Petia Radeva and
-                   Jos{\'{e}} Braz},
-      title     = {FootAndBall: Integrated Player and Ball Detector},
-      booktitle = {Proceedings of the 15th International Joint Conference on Computer
-                   Vision, Imaging and Computer Graphics Theory and Applications, {VISIGRAPP}
-                   2020, Volume 5: VISAPP, Valletta, Malta, February 27-29, 2020},
-      pages     = {47--56},
-      publisher = {{SCITEPRESS}},
-      year      = {2020},
-      url       = {https://doi.org/10.5220/0008916000470056},
-      doi       = {10.5220/0008916000470056}
-    }
 
 ### Environment and Dependencies
 * Ubuntu 18.04 or 20.04 with CUDA 10.2 + TensorFlow 1.9 and TensorFlow 1.10
@@ -74,7 +52,30 @@ To run the trained model use the following command:
 
 This will create a video with name given by *out_video* parameter with bounding boxes around the ball and 
 players position. Detection confidence level (in 0..1 range) will be displayed above each bounding box. 
-  
+
+
+### Citation
+If you find our work useful in your research, please consider citing:
+
+    @inproceedings{DBLP:conf/visapp/KomorowskiKS20,
+      author    = {Jacek Komorowski and
+                   Grzegorz Kurzejamski and
+                   Grzegorz Sarwas},
+      editor    = {Giovanni Maria Farinella and
+                   Petia Radeva and
+                   Jos{\'{e}} Braz},
+      title     = {FootAndBall: Integrated Player and Ball Detector},
+      booktitle = {Proceedings of the 15th International Joint Conference on Computer
+                   Vision, Imaging and Computer Graphics Theory and Applications, {VISIGRAPP}
+                   2020, Volume 5: VISAPP, Valletta, Malta, February 27-29, 2020},
+      pages     = {47--56},
+      publisher = {{SCITEPRESS}},
+      year      = {2020},
+      url       = {https://doi.org/10.5220/0008916000470056},
+      doi       = {10.5220/0008916000470056}
+    }
+    
+
 ### License
 Our code is released under the MIT License (see LICENSE file for details).
 
