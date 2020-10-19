@@ -7,7 +7,7 @@ Created by [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl),
 Grzegorz Kurzejamski and Grzegorz Sarwas
 at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics and Gaming</a>
 
-<p align="center"> <img src="visualization/demo.gif" width="100%"> </p>
+<p align="center"> <img src="images/demo.gif" width="100%"> </p>
 
 ### Abstract
 The paper describes a deep neural network-based detector dedicated for ball and players detection in high resolution, long shot, video recordings of soccer matches. The detector, dubbed FootAndBall, has an efficient fully
@@ -21,7 +21,7 @@ two orders of magnitude less parameters than a generic deep neural network-based
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
 **System overview:**
-<p align="center"> <img src="visualization/overview.png" width="100%"> </p>
+<p align="center"> <img src="images/overview.png" width="100%"> </p>
 
 ### Citation
 If you find our work useful in your research, please consider citing:

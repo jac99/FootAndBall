@@ -59,7 +59,7 @@ def count_parameters(model):
         return ap, tp
 
 
-# Functions for visualization of ground truth and training results
+# Functions for images of ground truth and training results
 
 def compose_confidence_maps(target_map, predicted_map, upscale_factor):
     # Visualize target and predicted confidence map side-by-side
