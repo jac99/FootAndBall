@@ -58,7 +58,7 @@ and
 . 
 
 ### Training
-To train our network, edit `config.txt` and set paths to ISSIA-CNR Soccer and SoccerPlayerDetection (optionally) training datasets.
+To train **FootAndBall** detector, edit `config.txt` and set paths to ISSIA-CNR Soccer and SoccerPlayerDetection (optionally) training datasets.
 Then, run:
     
     python train_detector.py --config config.txt
