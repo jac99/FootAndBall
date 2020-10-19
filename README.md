@@ -1,6 +1,8 @@
 
 
 ## FootAndBall: *Integrated player and ball detector*
+**[FootAndBall: Integrated player and ball detector](https://www.scitepress.org/Link.aspx?doi=10.5220/0008916000470056)** VISAPP 2020, Valletta, Malta. 
+
 Created by [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl),
 Grzegorz Kurzejamski and Grzegorz Sarwas
 at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics and Gaming</a>
@@ -19,10 +21,27 @@ the object of interest is taken into account for the classification. Due to its 
 two orders of magnitude less parameters than a generic deep neural network-based object detector, such as
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
+
+### Citation
+If you find our work useful in your research, please consider citing:
+
+    @conference{visapp20,
+    author={Jacek Komorowski. and Grzegorz Kurzejamski. and Grzegorz Sarwas.},
+    title={FootAndBall: Integrated Player and Ball Detector},
+    booktitle={Proceedings of the 15th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications - Volume 5: VISAPP,},
+    year={2020},
+    pages={47-56},
+    publisher={SciTePress},
+    organization={INSTICC},
+    doi={10.5220/0008916000470056},
+    isbn={978-989-758-402-2},
+    }
+    
 ### Environment and Dependencies
-* Ubuntu (18.04 or 20.04) with CUDA (10.1 or 10.2) + PyTorch (1.6 or above)
+* Code was tested using Python 3.6 on PyTorch 1.6 with CUDA 10.2 on Ubuntu 18.04
 
 Other dependencies include:
+* Python (1.6 or above)
 * scipy
 * opencv
 * kornia
@@ -31,10 +50,10 @@ Other dependencies include:
 
 ### Datasets
 Our model is mainly trained 
-<a href="https://drive.google.com/open?id=1l4jGKES04iLq9b0CPlvIevaAN8YDZ2ne" target="_blank">using ISSIA-CNR Soccer dataset</a> 
-(camera 1, 2, 3 and 3) 
+<a href="https://drive.google.com/file/d/1Pj6syLRShNQWQaunJmAZttUw2jDh8L_f/view?usp=sharing" target="_blank">using ISSIA-CNR Soccer dataset</a> 
 and
 <a href="http://www.cs.ubc.ca/labs/lci/datasets/SoccerPlayerDetection_bmvc17_v1.zip" target="_blank">SoccerPlayerDetection_bmvc17_v1 dataset</a>
+<a href="https://drive.google.com/file/d/1ctJojwDaWtHEAeDmB-AwEcO3apqT-O-9/view?usp=sharing" target="_blank">(alternative link)</a>
 . 
 
 ### Training
@@ -45,6 +64,7 @@ Then, run:
 
 ### Testing
 The pre-trained model *model_20201019_1416_final.pth* is saved in `models/` folder.
+The model was trained with ISSIA-CNR dataset (cameras 1,2,3 and 4) and SoccerPlayerDetection dataset (DataSet_001).
 To run the trained model use the following command:
 
     python run_detector --path datasets/issia/filmrole5.avi --weights models/model_20201019_1416_final.pth --out_video out_video.avi --device <cpu or cuda>
@@ -55,28 +75,6 @@ Videos with detection results on ISSIA-CNR dataset can ve downloaded here:
 <a href="visualization/results5.mp4>camera 5</a>,  
 <a href="visualization/results6.mp4>camera 6</a>
 . 
-
-### Citation
-If you find our work useful in your research, please consider citing:
-
-    @inproceedings{DBLP:conf/visapp/KomorowskiKS20,
-      author    = {Jacek Komorowski and
-                   Grzegorz Kurzejamski and
-                   Grzegorz Sarwas},
-      editor    = {Giovanni Maria Farinella and
-                   Petia Radeva and
-                   Jos{\'{e}} Braz},
-      title     = {FootAndBall: Integrated Player and Ball Detector},
-      booktitle = {Proceedings of the 15th International Joint Conference on Computer
-                   Vision, Imaging and Computer Graphics Theory and Applications, {VISIGRAPP}
-                   2020, Volume 5: VISAPP, Valletta, Malta, February 27-29, 2020},
-      pages     = {47--56},
-      publisher = {{SCITEPRESS}},
-      year      = {2020},
-      url       = {https://doi.org/10.5220/0008916000470056},
-      doi       = {10.5220/0008916000470056}
-    }
-    
 
 ### License
 Our code is released under the MIT License (see LICENSE file for details).
