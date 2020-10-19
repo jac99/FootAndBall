@@ -10,7 +10,8 @@ at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics an
 <p align="center"> <img src="images/demo.gif" width="100%"> </p>
 
 ### Abstract
-The paper describes a deep neural network-based detector dedicated for ball and players detection in high resolution, long shot, video recordings of soccer matches. The detector, dubbed FootAndBall, has an efficient fully
+The paper describes a deep neural network-based detector dedicated for ball and players detection in high resolution, 
+long shot, video recordings of soccer matches. The detector, dubbed **FootAndBall**, has an efficient fully
 convolutional architecture and can operate on input video stream with an arbitrary resolution. It produces ball
 confidence map encoding the position of the detected ball, player confidence map and player bounding boxes
 tensor encoding players’ positions and bounding boxes. The network uses Feature Pyramid Network desing
@@ -20,7 +21,7 @@ the object of interest is taken into account for the classification. Due to its 
 two orders of magnitude less parameters than a generic deep neural network-based object detector, such as
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
-**System overview:**
+### System overview
 <p align="center"> <img src="images/overview.png" width="100%"> </p>
 
 ### Citation
