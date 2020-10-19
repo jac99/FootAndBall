@@ -2,9 +2,8 @@
 
 ## FootAndBall: *Integrated player and ball detector*
 Created by [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl),
-<a href="https://sagsport.com/?lang=en" target="_blank">Grzegorz Kurzejamski>,
-<a href="https://sagsport.com/?lang=en" target="_blank">Grzegorz Sarwas>
-at Sport Algorithmics and Gaming
+Grzegorz Kurzejamski and Grzegorz Sarwas
+at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics and Gaming</a>
 
 **System overview:**
 <p align="center"> <img src=".github/overview.png" width="100%"> </p>
@@ -21,7 +20,7 @@ two orders of magnitude less parameters than a generic deep neural network-based
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
 ### Environment and Dependencies
-* Ubuntu 18.04 or 20.04 with CUDA 10.2 + TensorFlow 1.9 and TensorFlow 1.10
+* Ubuntu (18.04 or 20.04) with CUDA (10.1 or 10.2) + PyTorch (1.6 or above)
 
 Other dependencies include:
 * scipy
