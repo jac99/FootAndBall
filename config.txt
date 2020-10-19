@@ -1,0 +1,16 @@
+[DEFAULT]
+
+issia_path=/data/share/jacek/issia
+issia_train_cameras=1,2,3,4
+issia_val_cameras=5,6
+
+spd_path=/data/share/jacek/SoccerPlayerDetection_bmvc17_v1
+spd_set=1,2
+
+epochs=20
+lr=1e-3
+batch_size=12
+num_workers=8
+
+model=fb1
+
