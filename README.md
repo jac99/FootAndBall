@@ -24,7 +24,7 @@ SSD or YOLO. This allows real-time processing of high resolution input video str
 <p align="center"> <img src="images/overview.png" width="100%"> </p>
 
 ### Citation
-If you find our work useful in your research, please consider citing:
+If you find our work useful, please consider citing:
 
     @conference{visapp20,
     author={Jacek Komorowski. and Grzegorz Kurzejamski. and Grzegorz Sarwas.},
@@ -39,8 +39,7 @@ If you find our work useful in your research, please consider citing:
     }
     
 ### Environment and Dependencies
-* Code was tested using Python 3.6 with PyTorch 1.6 on Ubuntu 18.04 with CUDA 10.2
-
+Code was tested using Python 3.6 with PyTorch 1.6 on Ubuntu 18.04 with CUDA 10.2
 Other dependencies include:
 * Python (1.6 or above)
 * scipy
@@ -50,8 +49,8 @@ Other dependencies include:
 
 
 ### Datasets
-Our model is mainly trained 
-<a href="https://drive.google.com/file/d/1Pj6syLRShNQWQaunJmAZttUw2jDh8L_f/view?usp=sharing" target="_blank">using ISSIA-CNR Soccer dataset</a> 
+Our model is mainly trained using
+<a href="https://drive.google.com/file/d/1Pj6syLRShNQWQaunJmAZttUw2jDh8L_f/view?usp=sharing" target="_blank">ISSIA-CNR Soccer dataset</a> 
 and
 <a href="http://www.cs.ubc.ca/labs/lci/datasets/SoccerPlayerDetection_bmvc17_v1.zip" target="_blank">SoccerPlayerDetection_bmvc17_v1 dataset</a>
 <a href="https://drive.google.com/file/d/1ctJojwDaWtHEAeDmB-AwEcO3apqT-O-9/view?usp=sharing" target="_blank">(alternative link)</a>
@@ -66,16 +65,16 @@ Then, run:
 
 ### Testing
 The pre-trained model `model_20201019_1416_final.pth` is saved in `models/` folder.
-The model was trained with ISSIA-CNR dataset (cameras 1,2,3 and 4) and SoccerPlayerDetection dataset (set DataSet_001).
+The model was trained with ISSIA-CNR dataset (cameras 1,2,3,4) and SoccerPlayerDetection dataset (set 1).
 To run the trained model use the following command:
 
     python run_detector --path datasets/issia/filmrole5.avi --weights models/model_20201019_1416_final.pth --out_video out_video.avi --device <cpu|cuda>
 
 This will create a video with name given by *out_video* parameter with bounding boxes around the ball and 
 players position. Detection confidence level (in 0..1 range) will be displayed above each bounding box. 
-Examplary videos with detection results on ISSIA-CNR Soccer dataset can ve downloaded here:
-<a href="visualization/results5.mp4">camera 5</a>,  
-<a href="visualization/results6.mp4">camera 6</a>
+Exemplary videos with detection results on ISSIA-CNR Soccer dataset can ve downloaded here:
+[camera 5](images/results5.mp4)
+[camera 6](images/results6.mp4)
 . 
 
 ### License
