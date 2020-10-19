@@ -58,7 +58,7 @@ and
 . 
 
 ### Training
-To train **FootAndBall** detector, edit `config.txt` and set paths to ISSIA-CNR Soccer and SoccerPlayerDetection (optionally) training datasets.
+To train **FootAndBall** detector, download and decompress ISSIA-CNR Soccer and SoccerPlayerDetection (optionally) datasets, edit `config.txt` and set paths to downloaded datasets.
 Then, run:
     
     python train_detector.py --config config.txt
