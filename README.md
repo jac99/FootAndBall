@@ -27,9 +27,9 @@ SSD or YOLO. This allows real-time processing of high resolution input video str
 ### Citation
 If you find our work useful, please consider citing:
 
-    @conference{visapp20,
-    author={Jacek Komorowski. and Grzegorz Kurzejamski. and Grzegorz Sarwas.},
-    title={FootAndBall: Integrated Player and Ball Detector},
+    @conference{footandball,
+    author={Jacek Komorowski and Grzegorz Kurzejamski and Grzegorz Sarwas},
+    title={Foot{A}nd{B}all: Integrated Player and Ball Detector},
     booktitle={Proceedings of the 15th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications - Volume 5: VISAPP,},
     year={2020},
     pages={47-56},
