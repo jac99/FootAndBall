@@ -1,3 +1,7 @@
+# FootAndBall: Integrated Player and Ball Detector
+# Jacek Komorowski, Grzegorz Kurzejamski, Grzegorz Sarwas
+# Copyright (c) 2020 Sport Algorithmics and Gaming
+
 """
 This module contains functions to process SoccerPlayerDetection_bmvc17_v1 dataset
 "Light cascaded convolutional neural networks for accurate player detection"

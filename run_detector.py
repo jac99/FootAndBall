@@ -1,5 +1,9 @@
+# FootAndBall: Integrated Player and Ball Detector
+# Jacek Komorowski, Grzegorz Kurzejamski, Grzegorz Sarwas
+# Copyright (c) 2020 Sport Algorithmics and Gaming
+
 #
-# Run FootAndBall detector on ISSIA-CNR soccer videos
+# Run FootAndBall detector on ISSIA-CNR Soccer videos
 #
 
 import torch

@@ -1,5 +1,9 @@
+# FootAndBall: Integrated Player and Ball Detector
+# Jacek Komorowski, Grzegorz Kurzejamski, Grzegorz Sarwas
+# Copyright (c) 2020 Sport Algorithmics and Gaming
+
 #
-# Train FootAndBall detector on ISSIA-CNR soccer dataset
+# Train FootAndBall detector on ISSIA-CNR Soccer and SoccerPlayerDetection dataset
 #
 
 import tqdm

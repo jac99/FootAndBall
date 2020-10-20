@@ -1,3 +1,7 @@
+# FootAndBall: Integrated Player and Ball Detector
+# Jacek Komorowski, Grzegorz Kurzejamski, Grzegorz Sarwas
+# Copyright (c) 2020 Sport Algorithmics and Gaming
+
 from torchvision import transforms
 from PIL import Image
 import numpy as np

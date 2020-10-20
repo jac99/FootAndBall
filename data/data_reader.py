@@ -1,3 +1,7 @@
+# FootAndBall: Integrated Player and Ball Detector
+# Jacek Komorowski, Grzegorz Kurzejamski, Grzegorz Sarwas
+# Copyright (c) 2020 Sport Algorithmics and Gaming
+
 import random
 import torch
 from torch.utils.data import Sampler, DataLoader, ConcatDataset
