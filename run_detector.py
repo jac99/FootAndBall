@@ -10,6 +10,7 @@ import torch
 import cv2
 import os
 import argparse
+import tqdm
 
 import network.footandball as footandball
 import data.augmentation as augmentations
@@ -59,11 +60,12 @@ def run_detector(model, args):
     fps = sequence.get(cv2.CAP_PROP_FPS)
     (frame_width, frame_height) = (int(sequence.get(cv2.CAP_PROP_FRAME_WIDTH)),
                                    int(sequence.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-
+    n_frames = int(sequence.get(cv2.CAP_PROP_FRAME_COUNT))
     out_sequence = cv2.VideoWriter(args.out_video, cv2.VideoWriter_fourcc(*'XVID'), fps,
                                    (frame_width, frame_height))
 
     print('Processing video: {}'.format(args.path))
+    pbar = tqdm(total=n_frames)
     while sequence.isOpened():
         ret, frame = sequence.read()
         if not ret:
@@ -80,7 +82,9 @@ def run_detector(model, args):
 
         frame = draw_bboxes(frame, detections)
         out_sequence.write(frame)
+        pbar.update(1)
 
+    pbar.close()
     sequence.release()
     out_sequence.release()
 

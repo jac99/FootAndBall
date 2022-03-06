@@ -158,7 +158,8 @@ class FootAndBall(nn.Module):
             self.softmax = nn.Softmax(dim=1)
             # Non-maximum suppression layer
             self.nms_kernel_size = (3, 3)
-            self.nms = kornia.feature.NonMaximaSuppression2d(self.nms_kernel_size)
+            #self.nms = kornia.feature.NonMaximaSuppression2d(self.nms_kernel_size)
+            self.nms = kornia.geometry.subpix.nms.NonMaximaSuppression2d(self.nms_kernel_size)
 
     def detect_from_map(self, confidence_map, downscale_factor, max_detections, bbox_map=None):
         # downscale_factor: downscaling factor of the confidence map versus an original image
@@ -173,12 +174,11 @@ class FootAndBall(nn.Module):
         if max_detections < indices.shape[1]:
             indices = indices[:, :max_detections]
 
-        # Compute indexes of cells with detected object
+        # Compute indexes of cells with detected object and convert to pixel coordinates
         xc = indices % w
-        yc = indices // w
-
-        # Compute pixel coordinates of cell centers
         xc = xc.float() * downscale_factor + (downscale_factor - 1.) / 2.
+
+        yc = torch.div(indices, w, rounding_mode='trunc')
         yc = yc.float() * downscale_factor + (downscale_factor - 1.) / 2.
 
         # Bounding boxes are encoded as a relative position of the centre (with respect to the cell centre)
