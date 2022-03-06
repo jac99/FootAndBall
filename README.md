@@ -44,6 +44,7 @@ Code was tested using Python 3.8 with PyTorch 1.10.2 on Ubuntu 18.04 with CUDA 1
 Dependencies:
 * PyTorch (version 1.10 or above) 
 * opencv-python
+* tqdm
 * scipy
 * PIL
 
