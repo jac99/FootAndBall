@@ -211,7 +211,7 @@ class RandomAffine:
             else:
                 assert NotImplementedError('Incorrect shear: {}'.format(self.shear))
         else:
-            shear = 0.0
+            shear = [0., 0.]
 
         return angle, translations, scale, shear
 
