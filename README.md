@@ -7,7 +7,7 @@ Created by [Jacek Komorowski](mailto:jacek.komorowski@pw.edu.pl),
 Grzegorz Kurzejamski and Grzegorz Sarwas
 at <a href="https://sagsport.com/?lang=en" target="_blank">Sport Algorithmics and Gaming</a>
 
-<p align="center"> <img src="images/demo.gif" width="100%"> </p>
+<img src="images/demo.gif" width="100%">
 
 ### Abstract
 The paper describes a deep neural network-based detector dedicated for ball and players detection in high resolution, 
@@ -22,7 +22,7 @@ two orders of magnitude less parameters than a generic deep neural network-based
 SSD or YOLO. This allows real-time processing of high resolution input video stream.
 
 ### System overview
-<p align="center"> <img src="images/overview.png" width="100%"> </p>
+<img src="images/overview.png" width="100%">
 
 ### Citation
 If you find our work useful, please consider citing:
@@ -40,12 +40,10 @@ If you find our work useful, please consider citing:
     }
     
 ### Environment and Dependencies
-Code was tested using Python 3.6 with PyTorch 1.6 on Ubuntu 18.04 with CUDA 10.2.
+Code was tested using Python 3.8 with PyTorch 1.10.2 on Ubuntu 18.04 with CUDA 10.2.
 Other dependencies include:
-* Python (1.6 or above)
-* scipy
 * opencv-python
-* kornia
+* scipy
 * PIL
 
 
