@@ -65,7 +65,7 @@ def run_detector(model, args):
                                    (frame_width, frame_height))
 
     print('Processing video: {}'.format(args.path))
-    pbar = tqdm(total=n_frames)
+    pbar = tqdm.tqdm(total=n_frames)
     while sequence.isOpened():
         ret, frame = sequence.read()
         if not ret:
