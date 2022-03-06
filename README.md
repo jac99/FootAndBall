@@ -41,7 +41,8 @@ If you find our work useful, please consider citing:
     
 ### Environment and Dependencies
 Code was tested using Python 3.8 with PyTorch 1.10.2 on Ubuntu 18.04 with CUDA 10.2.
-Other dependencies include:
+Dependencies:
+* PyTorch (version 1.10 or above) 
 * opencv-python
 * scipy
 * PIL
