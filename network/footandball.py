@@ -4,9 +4,9 @@
 
 import torch
 import torch.nn as nn
-import kornia
 
 import network.fpn as fpn
+import network.nms as nms
 from data.augmentation import BALL_LABEL, PLAYER_LABEL, BALL_BBOX_SIZE
 
 
@@ -29,13 +29,6 @@ def cell2pixel(cell_x, cell_y, downsampling_factor):
     y1 = cell_y * downsampling_factor
     y2 = cell_y * downsampling_factor + downsampling_factor - 1
     return x1, y1, x2, y2
-
-
-def cell_center(cell_x, cell_y, downsampling_factor):
-    # Pixel coordinates of the cell center
-    x = cell_x * downsampling_factor + (downsampling_factor - 1) / 2
-    y = cell_y * downsampling_factor + (downsampling_factor - 1) / 2
-    return x, y
 
 
 def create_groundtruth_maps(bboxes, blabels, img_shape, player_downsampling_factor, ball_downsampling_factor,
@@ -148,18 +141,9 @@ class FootAndBall(nn.Module):
         self.ball_delta = 3
         self.player_delta = 3
 
-        self.softmax = None
-        self.nms = None
-        if phase == 'eval':
-            # In eval phase pass confidence feature maps through the Softmax to have normalized values
-            self.softmax = nn.Softmax(dim=1)
-        elif phase == 'detect':
-            # In detect phase we are working on feature maps (B, C, H, W)
-            self.softmax = nn.Softmax(dim=1)
-            # Non-maximum suppression layer
-            self.nms_kernel_size = (3, 3)
-            #self.nms = kornia.feature.NonMaximaSuppression2d(self.nms_kernel_size)
-            self.nms = kornia.geometry.subpix.nms.NonMaximaSuppression2d(self.nms_kernel_size)
+        self.softmax = nn.Softmax(dim=1)
+        self.nms_kernel_size = (3, 3)
+        self.nms = nms.NonMaximaSuppression2d(self.nms_kernel_size)
 
     def detect_from_map(self, confidence_map, downscale_factor, max_detections, bbox_map=None):
         # downscale_factor: downscaling factor of the confidence map versus an original image

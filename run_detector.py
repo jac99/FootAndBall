@@ -28,8 +28,8 @@ def draw_bboxes(image, detections):
 
         elif label == BALL_LABEL:
             x1, y1, x2, y2 = box
-            x = (x1 + x2) / 2
-            y = (y1 + y2) / 2
+            x = int((x1 + x2) / 2)
+            y = int((y1 + y2) / 2)
             color = (0, 0, 255)
             radius = 25
             cv2.circle(image, (int(x), int(y)), radius, color, 2)
