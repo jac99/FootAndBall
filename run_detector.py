@@ -39,7 +39,7 @@ def draw_bboxes(image, detections):
     return image
 
 
-def run_detector(model, args):
+def run_detector(model: footandball.FootAndBall, args: argparse.Namespace):
     model.print_summary(show_architecture=False)
     model = model.to(args.device)
 
